@@ -1,5 +1,5 @@
 module Middleman
   module Ngmin
-    VERSION = "1.0.0"
+    VERSION = "0.4.1"
   end
 end

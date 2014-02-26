@@ -15,11 +15,7 @@ Gem::Specification.new do |s|
   s.files = `git ls-files -z`.split("\0")
   s.test_files = `git ls-files -z -- {fixtures,features}/*`.split("\0")
   s.require_paths = ["lib"]
-  s.add_runtime_dependency("ngmin-rails", ["~> 0.4.0"])
   s.add_runtime_dependency("middleman-core", ["~> 3.2"])
   s.add_runtime_dependency("middleman-sprockets", ["~> 3.2"])
   s.add_runtime_dependency("execjs", ["~> 2.0.2"])
-
-  # This is not a real dependency, but prevents ngmin-rails and middleman-core from fighting!
-  s.add_runtime_dependency("rails", [">= 3.2.6"])
 end

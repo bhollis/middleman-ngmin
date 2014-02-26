@@ -1,4 +1,4 @@
-1.0.0
+0.4.1
 -----
 
-* Initial version
+* Initial version, ngmin version 0.4.1

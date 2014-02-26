@@ -2,6 +2,8 @@
 
 `middleman-ngmin` is an extension for the [Middleman] static site generator that adds [ngmin](https://github.com/btford/ngmin) processing for your JavaScript files to the asset pipeline. This will automatically insert the [AngularJS](http://angularjs.org) injector annotations to your declarations so that your code can minify correctly.
 
+The code for the Sprockets processor and for bundling ngmin was taken from the [ngmin-rails](https://github.com/jasonm/ngmin-rails/issues) project - it was copied rather than having middleman-ngmin depend on ngmin-rails in order not to bring along a dependency on Rails. Thanks to Jason Morrison and Brandon Tilley for creating ngmin-rails!
+
 [![Gem Version](https://badge.fury.io/rb/middleman-ngmin.png)][gem]
 [![Build Status](https://travis-ci.org/middleman/middleman-ngmin.png)][travis]
 [![Dependency Status](https://gemnasium.com/middleman/middleman-ngmin.png?travis)][gemnasium]
@@ -26,12 +28,13 @@ activate :ngmin
 
 That's it! Your assets will now be processed.
 
+## Versioning
+
+Like ngmin-rails, middleman-ngmin's version number mirrors the version number for the version of ngmin that is bundled with it.
+
 ## Bug Reports
 
-This project simply plugs [ngmin-rails](https://github.com/jasonm/ngmin-rails) into Middleman! For bugs in ngmin-rails or ngmin itself, please use those projects' issue trackers:
-
-* [ngmin-rails](https://github.com/jasonm/ngmin-rails/issues)
-* [ngmin](https://github.com/btford/ngmin/issues)
+This project simply plugs [ngmin](https://github.com/jasonm/ngmin-rails) into Middleman! For bugs in ngmin itself, please file issues in [ngmin's issue tracker](https://github.com/btford/ngmin/issues).
 
 Github Issues are used for managing bug reports and feature requests. If you run into issues, please search the issues and submit new problems: https://github.com/middleman/middleman-ngmin/issues
 
@@ -43,6 +46,12 @@ The best way to get quick responses to your issues and swift fixes to your bugs 
 2. Install Bundler: `gem install bundler`
 3. Run `bundle install` inside the project root to install the gem dependencies.
 4. Run test cases: `bundle exec rake test`
+
+## Upgrading ngmin
+
+The actual ngmin project is bundled into this gem via [Browserify](https://github.com/substack/node-browserify). You can update to the latest version of ngmin via Rake:
+
+    rake ngmin:build
 
 ## License
 
