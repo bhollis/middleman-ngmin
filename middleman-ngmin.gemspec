@@ -17,5 +17,5 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.add_runtime_dependency("middleman-core", ["~> 3.2"])
   s.add_runtime_dependency("middleman-sprockets", ["~> 3.2"])
-  s.add_runtime_dependency("execjs", ["~> 2.0.2"])
+  s.add_runtime_dependency("execjs", [">= 1.4"])
 end
