@@ -14,3 +14,4 @@ gem "aruba", "~> 0.5.1"
 
 # These are locked to old versions because old-Ruby support is passe
 gem 'mime-types', '< 3'
+gem 'nokogiri', '< 1.7'
